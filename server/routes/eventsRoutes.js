@@ -54,7 +54,7 @@ router.put('/:id', async (req, res)=>{
             { title, description, date, location},
             { new: true });
             await event.save();
-        return res.json(event)
+        res.status(200).json(event);
         if(!event){
             return res.status(404).json({message: 'No event found'})
         }
