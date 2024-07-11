@@ -3,16 +3,20 @@ const { Schema, model } = mongoose;
 
 const eventSchema = new Schema({
     title: {
-        type: String
+        type: String,
+        required: true
     },
     description: {
-        type: String
+        type: String,
+        required: true
     },
     date: {
-        type: Date
+        type: Date,
+        required: true
     },
     location: {
-        type: String
+        type: String,
+        required: true
     },
 });
 const Event = model('Event', eventSchema);
