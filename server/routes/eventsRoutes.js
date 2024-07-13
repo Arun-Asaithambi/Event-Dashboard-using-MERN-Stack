@@ -7,7 +7,7 @@ const Event = require('../models/schema');
 router.get('/', async (req, res)=>{
     try{
         const events = await Event.find({})
-        res.status(200).json({count: events.length, data: events})
+        res.status(200).json({events})
     } catch(e) {
         res.status(500).json({error: e.message})
     }

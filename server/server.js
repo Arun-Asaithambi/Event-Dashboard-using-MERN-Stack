@@ -16,6 +16,6 @@ async function main() {
   console.log('connected to db');
 }
 
-app.listen(3000, () =>{
-    console.log("server is running on server 3000");
+app.listen(5000, () =>{
+    console.log("server is running on server 5000");
 })
