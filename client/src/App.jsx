@@ -1,8 +1,21 @@
+import React from "react";
+import { Routes, Route} from "react-router-dom";
+import Home from "./pages/home";
+import ShowEvent from "./pages/showEvent";
+import CreateEvent from "./pages/createEvent";
+import EditEvent from "./pages/editEvent";
+import DeleteEvent from "./pages/deleteEvent";
 
 function App() {
   return (
     <>
-      <h1>react app</h1>
+      <Routes> 
+        <Route path="/" element={<Home />} />
+        <Route path="/events/details/:id" element={<ShowEvent />} />
+        <Route path="/events/create" element={<CreateEvent />} />
+        <Route path="/events/edit/:id" element={<EditEvent />} />
+        <Route path="/events/delete/:id" element={<DeleteEvent />} />
+      </Routes> 
     </>
   )
 }
